@@ -221,14 +221,10 @@ if (!empty($img1)) {
 		case 3: $new_image_path = create_merged_image($fileA_path, $fileB_path, $fileC_path); break;
 	}	
 
-  // bandaid until Imgur is back vvvv	
   $image = upload_to_imgur($new_image_path,'ba316e9df37b932378114785f946676d');
 		if ($image === false) {
 			die('Failed to upload image.');
 		}
 		# HERE!
   echo $image['original_image'];
-  
-  // echo "http://jwdallas.com/tim/temp_imgs/series_image.jpg";
-  
 }
